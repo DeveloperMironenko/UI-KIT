@@ -1,7 +1,14 @@
-import {MouseEventHandler, ReactNode} from "react"
+import { MouseEventHandler, ReactNode } from "react";
+import { Size, View } from "../../../shared";
+import { Width } from "../../../shared/types/width";
 
 export type ButtonProps = {
-    children: ReactNode,
-    size?: "s" | "m" | "l",
-    onClick?: MouseEventHandler<HTMLButtonElement>
-}
+  width?: Width;
+  size?: Size;
+  view?: View;
+  outlined?: boolean;
+  loading?: boolean;
+  disabled?: boolean;
+  children: ReactNode;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+};
