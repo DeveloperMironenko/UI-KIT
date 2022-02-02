@@ -1,7 +1,31 @@
 import React from "react";
 import { ButtonProps } from "./Button.types";
-import { StyledButton } from "./Button.styled";
+import { StyledButton, StyledButtonContent } from "./Button.styled";
 
-export const Button = ({ children }: ButtonProps) => {
-  return <StyledButton>{children}</StyledButton>;
-};
+export const Button = ({
+  className,
+  type = "button",
+  width = "auto",
+  size = "m",
+  view = "primary",
+  justify = "center",
+  outlined,
+  // loading,
+  disabled,
+  children,
+  onClick,
+}: ButtonProps) => (
+  <StyledButton
+    className={className}
+    type={type}
+    width={width}
+    size={size}
+    view={view}
+    outlined={outlined}
+    // loading={loading}
+    disabled={disabled}
+    onClick={onClick}
+  >
+    <StyledButtonContent justify={justify}>{children}</StyledButtonContent>
+  </StyledButton>
+);

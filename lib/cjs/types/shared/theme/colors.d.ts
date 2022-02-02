@@ -1,11 +1,4 @@
-/// <reference types="react" />
-import { ReactNode, MouseEventHandler } from 'react';
-
-declare type Size = "s" | "m" | "l";
-
-declare type View = "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
-
-declare const themes: {
+export declare const themes: {
     name: string;
     components: {
         button: {
@@ -44,7 +37,7 @@ declare const themes: {
         };
     };
 }[];
-declare const defaultTheme: {
+export declare const defaultTheme: {
     name: string;
     components: {
         button: {
@@ -83,24 +76,3 @@ declare const defaultTheme: {
         };
     };
 };
-
-declare type Width = "auto" | "full";
-
-declare type JustifyContent = "flex-start" | "center" | "flex-end" | "space-between" | "space-around" | "space-evenly" | "initial" | "inherit";
-
-declare type ButtonProps = {
-    className?: string;
-    type?: "button" | "submit";
-    width?: Width;
-    size?: Size;
-    view?: View;
-    justify?: JustifyContent;
-    outlined?: boolean;
-    disabled?: boolean;
-    children: ReactNode;
-    onClick?: MouseEventHandler<HTMLButtonElement>;
-};
-
-declare const Button: ({ className, type, width, size, view, justify, outlined, disabled, children, onClick, }: ButtonProps) => JSX.Element;
-
-export { Button, Size, View, defaultTheme, themes };

@@ -79,4 +79,4 @@ export const themes = [
   },
 ];
 
-export const defaultTheme = themes[0];
+export const defaultTheme = themes[1];
