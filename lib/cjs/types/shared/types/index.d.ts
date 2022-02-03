@@ -1,3 +1,3 @@
-export * from "./size";
-export * from "./view";
-export * from "./view";
+export * from "./SizeType";
+export * from "./ViewType";
+export * from "./ViewType";

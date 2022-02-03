@@ -1,9 +1,9 @@
 /// <reference types="react" />
 import { ReactNode, MouseEventHandler } from 'react';
 
-declare type Size = "s" | "m" | "l";
+declare type SizeType = "s" | "m" | "l";
 
-declare type View = "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
+declare type ViewType = "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
 
 declare const themes: {
     name: string;
@@ -84,16 +84,16 @@ declare const defaultTheme: {
     };
 };
 
-declare type Width = "auto" | "full";
+declare type WidthType = "auto" | "full";
 
 declare type JustifyContent = "flex-start" | "center" | "flex-end" | "space-between" | "space-around" | "space-evenly" | "initial" | "inherit";
 
 declare type ButtonProps = {
     className?: string;
     type?: "button" | "submit";
-    width?: Width;
-    size?: Size;
-    view?: View;
+    width?: WidthType;
+    size?: SizeType;
+    view?: ViewType;
     justify?: JustifyContent;
     outlined?: boolean;
     disabled?: boolean;
@@ -103,4 +103,4 @@ declare type ButtonProps = {
 
 declare const Button: ({ className, type, width, size, view, justify, outlined, disabled, children, onClick, }: ButtonProps) => JSX.Element;
 
-export { Button, Size, View, defaultTheme, themes };
+export { Button, SizeType, ViewType, defaultTheme, themes };

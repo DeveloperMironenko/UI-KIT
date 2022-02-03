@@ -1,13 +1,13 @@
 import { MouseEventHandler, ReactNode } from "react";
-import { Size, View } from "../../../shared";
-import { Width } from "../../../shared/types/width";
-import { JustifyContent } from "../../../shared/types/justify";
+import { SizeType, ViewType } from "../../../shared";
+import { WidthType } from "../../../shared/types/WidthType";
+import { JustifyContent } from "../../../shared/types/JustifyType";
 export declare type ButtonProps = {
     className?: string;
     type?: "button" | "submit";
-    width?: Width;
-    size?: Size;
-    view?: View;
+    width?: WidthType;
+    size?: SizeType;
+    view?: ViewType;
     justify?: JustifyContent;
     outlined?: boolean;
     disabled?: boolean;

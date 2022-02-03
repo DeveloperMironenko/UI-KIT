@@ -1,4 +1,4 @@
-export type View =
+export type ViewType =
   | "primary"
   | "secondary"
   | "success"
