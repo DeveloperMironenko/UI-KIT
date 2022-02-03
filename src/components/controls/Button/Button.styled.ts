@@ -47,9 +47,9 @@ const handlerView = (
 
 const handlerActions = (disabled: ButtonProps["disabled"]) => {
   if (disabled) {
-    return "filter: opacity(0.4);";
+    return "filter: opacity(45%);";
   }
-  return "&:hover {filter: brightness(1.2);} &:active { filter: brightness(0.9);}";
+  return "&:hover {filter: brightness(90%);} &:active { filter: brightness(80%);}";
 };
 
 export const StyledButton = styled.button<ButtonProps>`
