@@ -29,14 +29,19 @@ const handlerView = (
   outlined: ButtonProps["outlined"],
   theme: any
 ) => {
-  const main =
-    view && theme
-      ? theme.components.button[view].background
-      : defaultTheme.components.button.primary.background;
-  const second =
-    view && theme
-      ? theme.components.button[view].color
-      : defaultTheme.components.button.primary.color;
+  let main;
+  let second;
+
+  if (Object.keys(theme).length && view) {
+    main = theme.components.button[view].background;
+    second = theme.components.button[view].color;
+  } else if (view) {
+    main = defaultTheme.components.button[view].background;
+    second = defaultTheme.components.button[view].color;
+  } else {
+    main = defaultTheme.components.button.primary.background;
+    second = defaultTheme.components.button.primary.color;
+  }
 
   if (outlined) {
     return `border: 1px solid ${main}; color: ${main};`;
