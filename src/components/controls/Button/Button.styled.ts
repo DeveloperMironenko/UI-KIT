@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { ButtonProps } from "./Button.types";
-import { defaultTheme } from "../../../shared";
 
 const handlerWidth = (width: ButtonProps["width"]) => {
   switch (width) {
@@ -32,15 +31,12 @@ const handlerView = (
   let main;
   let second;
 
-  if (Object.keys(theme).length && view) {
+  if (view) {
     main = theme.components.button[view].background;
     second = theme.components.button[view].color;
-  } else if (view) {
-    main = defaultTheme.components.button[view].background;
-    second = defaultTheme.components.button[view].color;
   } else {
-    main = defaultTheme.components.button.primary.background;
-    second = defaultTheme.components.button.primary.color;
+    main = theme.components.button.primary.background;
+    second = theme.components.button.primary.color;
   }
 
   if (outlined) {
@@ -74,10 +70,13 @@ export const StyledButton = styled.button<ButtonProps>`
 
 export const StyledButtonContent = styled.div<{
   justify: ButtonProps["justify"];
+  textTransform?: ButtonProps["textTransform"];
 }>`
   display: flex;
   align-items: center;
   width: 100%;
   height: 100%;
+  font-weight: 700;
   ${({ justify }) => `justify-content: ${justify || "center"};`};
+  ${({ textTransform }) => `text-transform: ${textTransform || "none"};`};
 `;

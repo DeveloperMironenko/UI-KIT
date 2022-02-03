@@ -7,6 +7,7 @@ export const Button = ({
   type = "button",
   width = "auto",
   size = "m",
+  textTransform = "capitalize",
   view = "primary",
   justify = "center",
   outlined,
@@ -26,6 +27,8 @@ export const Button = ({
     disabled={disabled}
     onClick={onClick}
   >
-    <StyledButtonContent justify={justify}>{children}</StyledButtonContent>
+    <StyledButtonContent justify={justify} textTransform={textTransform}>
+      {children}
+    </StyledButtonContent>
   </StyledButton>
 );
