@@ -28,27 +28,27 @@ const handlerView = (
   outlined: ButtonProps["outlined"],
   theme: any
 ) => {
-  let main;
-  let second;
+  let background;
+  let text;
 
   if (view) {
-    main = theme.components.button[view].background;
-    second = theme.components.button[view].color;
+    background = theme.components.button[view].background;
+    text = theme.components.button[view].text;
   } else {
-    main = theme.components.button.primary.background;
-    second = theme.components.button.primary.color;
+    background = theme.components.button.primary.background;
+    text = theme.components.button.primary.text;
   }
 
   if (outlined) {
-    return `border: 1px solid ${main}; color: ${main};`;
+    return `border: 1px solid ${background}; color: ${background};`;
   }
 
-  return `background: ${main}; color: ${second};`;
+  return `background: ${background}; color: ${text};`;
 };
 
 const handlerActions = (disabled: ButtonProps["disabled"]) => {
   if (disabled) {
-    return "filter: opacity(45%);";
+    return "filter: opacity(45%); user-select: none;";
   }
   return "&:hover {filter: brightness(90%);} &:active { filter: brightness(80%);}";
 };

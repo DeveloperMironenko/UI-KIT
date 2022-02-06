@@ -5,35 +5,85 @@ export const themes = [
       button: {
         primary: {
           background: "#38A576",
-          color: "#FFFFFF",
+          text: "#FFFFFF",
         },
         secondary: {
           background: "#222D35",
-          color: "#E2E3E3",
+          text: "#E2E3E3",
         },
         success: {
           background: "#44D600",
-          color: "#FFFFFF",
+          text: "#FFFFFF",
         },
         danger: {
           background: "#FF1A43",
-          color: "#FFFFFF",
+          text: "#FFFFFF",
         },
         warning: {
           background: "#FFA31A",
-          color: "#FFFFFF",
+          text: "#FFFFFF",
         },
         info: {
           background: "#33C2FF",
-          color: "#FFFFFF",
+          text: "#FFFFFF",
         },
         light: {
           background: "#FFFFFF",
-          color: "#000000",
+          text: "#000000",
         },
         dark: {
           background: "#000000",
-          color: "#FFFFFF",
+          text: "#FFFFFF",
+        },
+      },
+      input: {
+        primary: {
+          border: "#CCCEDD",
+          background: "#222D35",
+          text: "#FFFFFF",
+          placeholder: "#F2F2F2",
+        },
+        secondary: {
+          border: "#222D35",
+          background: "#222D35",
+          text: "#FFFFFF",
+          placeholder: "#F2F2F2",
+        },
+        success: {
+          border: "#44D600",
+          background: "#222D35",
+          text: "#FFFFFF",
+          placeholder: "#F2F2F2",
+        },
+        danger: {
+          border: "#FF1A43",
+          background: "#222D35",
+          text: "#FFFFFF",
+          placeholder: "#F2F2F2",
+        },
+        warning: {
+          border: "#FFA31A",
+          background: "#222D35",
+          text: "#FFFFFF",
+          placeholder: "#F2F2F2",
+        },
+        info: {
+          border: "#33C2FF",
+          background: "#222D35",
+          text: "#FFFFFF",
+          placeholder: "#F2F2F2",
+        },
+        light: {
+          border: "#FFFFFF",
+          background: "#222D35",
+          text: "#FFFFFF",
+          placeholder: "#F2F2F2",
+        },
+        dark: {
+          border: "#000000",
+          background: "#222D35",
+          text: "#FFFFFF",
+          placeholder: "#F2F2F2",
         },
       },
     },
@@ -44,35 +94,85 @@ export const themes = [
       button: {
         primary: {
           background: "#1A75FF",
-          color: "#FFFFFF",
+          text: "#FFFFFF",
         },
         secondary: {
           background: "#6E759F",
-          color: "#E2E3E3",
+          text: "#E2E3E3",
         },
         success: {
           background: "#44D600",
-          color: "#FFFFFF",
+          text: "#FFFFFF",
         },
         danger: {
           background: "#FF1A43",
-          color: "#FFFFFF",
+          text: "#FFFFFF",
         },
         warning: {
           background: "#FFA31A",
-          color: "#FFFFFF",
+          text: "#FFFFFF",
         },
         info: {
           background: "#33C2FF",
-          color: "#FFFFFF",
+          text: "#FFFFFF",
         },
         light: {
           background: "#FFFFFF",
-          color: "#000000",
+          text: "#000000",
         },
         dark: {
           background: "#000000",
-          color: "#FFFFFF",
+          text: "#FFFFFF",
+        },
+      },
+      input: {
+        primary: {
+          border: "#CCCEDD",
+          background: "#FFFFFF",
+          text: "#223354",
+          placeholder: "#F2F2F2",
+        },
+        secondary: {
+          border: "#223354",
+          background: "#FFFFFF",
+          text: "#223354",
+          placeholder: "#F2F2F2",
+        },
+        success: {
+          border: "#44D600",
+          background: "#FFFFFF",
+          text: "#223354",
+          placeholder: "#F2F2F2",
+        },
+        danger: {
+          border: "#FF1A43",
+          background: "#FFFFFF",
+          text: "#223354",
+          placeholder: "#F2F2F2",
+        },
+        warning: {
+          border: "#FFA31A",
+          background: "#FFFFFF",
+          text: "#223354",
+          placeholder: "#F2F2F2",
+        },
+        info: {
+          border: "#33C2FF",
+          background: "#FFFFFF",
+          text: "#223354",
+          placeholder: "#F2F2F2",
+        },
+        light: {
+          border: "#FFFFFF",
+          background: "#FFFFFF",
+          text: "#223354",
+          placeholder: "#F2F2F2",
+        },
+        dark: {
+          border: "#000000",
+          background: "#FFFFFF",
+          text: "#223354",
+          placeholder: "#F2F2F2",
         },
       },
     },

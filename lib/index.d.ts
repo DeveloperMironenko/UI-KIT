@@ -14,35 +14,85 @@ declare const themes: {
         button: {
             primary: {
                 background: string;
-                color: string;
+                text: string;
             };
             secondary: {
                 background: string;
-                color: string;
+                text: string;
             };
             success: {
                 background: string;
-                color: string;
+                text: string;
             };
             danger: {
                 background: string;
-                color: string;
+                text: string;
             };
             warning: {
                 background: string;
-                color: string;
+                text: string;
             };
             info: {
                 background: string;
-                color: string;
+                text: string;
             };
             light: {
                 background: string;
-                color: string;
+                text: string;
             };
             dark: {
                 background: string;
-                color: string;
+                text: string;
+            };
+        };
+        input: {
+            primary: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            secondary: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            success: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            danger: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            warning: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            info: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            light: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            dark: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
             };
         };
     };
@@ -53,35 +103,85 @@ declare const defaultTheme: {
         button: {
             primary: {
                 background: string;
-                color: string;
+                text: string;
             };
             secondary: {
                 background: string;
-                color: string;
+                text: string;
             };
             success: {
                 background: string;
-                color: string;
+                text: string;
             };
             danger: {
                 background: string;
-                color: string;
+                text: string;
             };
             warning: {
                 background: string;
-                color: string;
+                text: string;
             };
             info: {
                 background: string;
-                color: string;
+                text: string;
             };
             light: {
                 background: string;
-                color: string;
+                text: string;
             };
             dark: {
                 background: string;
-                color: string;
+                text: string;
+            };
+        };
+        input: {
+            primary: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            secondary: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            success: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            danger: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            warning: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            info: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            light: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
+            };
+            dark: {
+                border: string;
+                background: string;
+                text: string;
+                placeholder: string;
             };
         };
     };
@@ -96,40 +196,90 @@ declare const useTheme: () => {
             button: {
                 primary: {
                     background: string;
-                    color: string;
+                    text: string;
                 };
                 secondary: {
                     background: string;
-                    color: string;
+                    text: string;
                 };
                 success: {
                     background: string;
-                    color: string;
+                    text: string;
                 };
                 danger: {
                     background: string;
-                    color: string;
+                    text: string;
                 };
                 warning: {
                     background: string;
-                    color: string;
+                    text: string;
                 };
                 info: {
                     background: string;
-                    color: string;
+                    text: string;
                 };
                 light: {
                     background: string;
-                    color: string;
+                    text: string;
                 };
                 dark: {
                     background: string;
-                    color: string;
+                    text: string;
+                };
+            };
+            input: {
+                primary: {
+                    border: string;
+                    background: string;
+                    text: string;
+                    placeholder: string;
+                };
+                secondary: {
+                    border: string;
+                    background: string;
+                    text: string;
+                    placeholder: string;
+                };
+                success: {
+                    border: string;
+                    background: string;
+                    text: string;
+                    placeholder: string;
+                };
+                danger: {
+                    border: string;
+                    background: string;
+                    text: string;
+                    placeholder: string;
+                };
+                warning: {
+                    border: string;
+                    background: string;
+                    text: string;
+                    placeholder: string;
+                };
+                info: {
+                    border: string;
+                    background: string;
+                    text: string;
+                    placeholder: string;
+                };
+                light: {
+                    border: string;
+                    background: string;
+                    text: string;
+                    placeholder: string;
+                };
+                dark: {
+                    border: string;
+                    background: string;
+                    text: string;
+                    placeholder: string;
                 };
             };
         };
     };
-    setTheme: (name: string) => void;
+    setTheme: (theme: any) => void;
 };
 
 declare type WidthType = "auto" | "full";
@@ -153,9 +303,14 @@ declare type ButtonProps = {
 declare const Button: ({ className, type, width, size, textTransform, view, justify, outlined, disabled, children, onClick, }: ButtonProps) => JSX.Element;
 
 declare type ThemeProps = {
+    theme?: any;
     children: ReactNode;
 };
+declare type ThemeContextProviderProps = {
+    theme?: any;
+    setTheme?: (theme: any) => void;
+};
 
-declare const Theme: ({ children }: ThemeProps) => JSX.Element;
+declare const Theme: ({ children, theme }: ThemeProps) => JSX.Element;
 
-export { Button, GlobalStyle, SizeType, TextTransformType, Theme, ViewType, defaultTheme, themes, useTheme };
+export { Button, GlobalStyle, SizeType, TextTransformType, Theme, ThemeContextProviderProps, ThemeProps, ViewType, defaultTheme, themes, useTheme };
