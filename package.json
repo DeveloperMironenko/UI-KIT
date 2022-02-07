@@ -1,6 +1,6 @@
 {
   "name": "@nakamura.now/ui-kit",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "",
   "keywords": [],
   "main": "lib/cjs/index.js",
