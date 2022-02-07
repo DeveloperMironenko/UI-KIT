@@ -1,14 +1,12 @@
 import styled from "styled-components";
 import { InputProps } from "./Input.types";
+import { defaultTheme } from "../../../shared";
 
 const handlerWidth = (width: InputProps["width"]) => {
-  switch (width) {
-    case "full":
-      return "width: 100%; max-width: 100%; min-width: 100%;";
-    case "auto":
-    default:
-      return "width: auto; max-width: none; min-width: none;";
+  if (width) {
+    return `width: ${width}; max-width: ${width};`;
   }
+  return "width: auto; max-width: auto;";
 };
 
 const handlerSize = (size: InputProps["size"]) => {
@@ -35,31 +33,18 @@ const handlerFontSize = (size: InputProps["size"]) => {
   }
 };
 
-const handlerView = (view: InputProps["view"], theme: any) => {
-  let background;
-  let border;
-
-  if (view) {
-    background = theme.components.input[view].background;
-    border = theme.components.input[view].border;
-  } else {
-    background = theme.components.input.primary.background;
-    border = theme.components.input.primary.border;
+const handlerView = (view: InputProps["view"] = "primary", theme: any) => {
+  if (theme?.components?.input) {
+    return `background: ${theme.components.input[view].background}; border: 1px solid ${theme.components.input[view].border};`;
   }
-
-  return `background: ${background}; border: 1px solid ${border};`;
+  return `background: ${defaultTheme.components.input[view].background}; border: 1px solid ${theme.components.input[view].border};`;
 };
 
-const handlerColor = (view: InputProps["view"], theme: any) => {
-  let text;
-
-  if (view) {
-    text = theme.components.input[view].text;
-  } else {
-    text = theme.components.input.primary.text;
+const handlerColor = (view: InputProps["view"] = "primary", theme: any) => {
+  if (theme?.components?.input) {
+    return `color: ${theme.components.input[view].text};`;
   }
-
-  return `color: ${text};`;
+  return `color: ${defaultTheme.components.input[view].text};`;
 };
 
 export const StyledInput = styled.div<InputProps>`

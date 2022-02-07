@@ -1,9 +1,42 @@
 # Changelog
 
+## v1.5.3 (02/07/2022)
+Important thinks:
+
+- The `Input` component was updated.
+
+--------------------
+
+## v1.5.2 (02/07/2022)
+Important thinks:
+
+- The `types` were updated.
+- The `Text` component was updated.
+- The `Theme` component was updated.
+- The `Input` component was updated.
+- The `Button` component was updated.
+- The `Container` component was updated.
+- The `Card` component was created.
+--------------------
+
+## v1.5.1 (02/05/2022)
+Important thinks:
+
+- The `types` were updated.
+- The `Theme` component was updated.
+--------------------
+
+## v1.5.0 (02/05/2022)
+Important thinks:
+
+- The `types` were updated.
+- The `Container` component was created.
+--------------------
+
 ## v1.4.0 (02/05/2022)
 Important thinks:
 
-- The Input component was created&.
+- The `Input` component was created.
 --------------------
 
 ## v1.3.0 (02/05/2022)

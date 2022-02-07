@@ -1,14 +1,12 @@
-import { ChangeEventHandler, KeyboardEvent } from "react";
-import { SizeType, TextTransformType, ViewType } from "../../../shared";
-import { WidthType } from "../../../shared/types/WidthType";
-import { JustifyContent } from "../../../shared/types/JustifyType";
+import { ChangeEventHandler } from "react";
+import { SizeType, ViewType, WidthType } from "../../../shared";
 
 export type InputProps = {
   id?: string;
   className?: string;
   value?: string;
   placeholder?: string;
-  type?: "text" | "password";
+  type?: "text" | "password" | "email";
   width?: WidthType;
   size?: SizeType;
   view?: ViewType;

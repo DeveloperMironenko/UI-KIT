@@ -1,4 +1,4 @@
-export const themes = [
+export const Themes = [
   {
     name: "Dark",
     components: {
@@ -85,6 +85,36 @@ export const themes = [
           text: "#FFFFFF",
           placeholder: "#F2F2F2",
         },
+      },
+      text: {
+        primary: {
+          text: "#F2F2F2",
+        },
+        secondary: {
+          text: "#FFFFFF7F",
+        },
+        success: {
+          text: "#44D600",
+        },
+        danger: {
+          text: "#FF1A43",
+        },
+        warning: {
+          text: "#FFA31A",
+        },
+        info: {
+          text: "#33C2FF",
+        },
+        light: {
+          text: "#FFFFFF",
+        },
+        dark: {
+          text: "#000000",
+        },
+      },
+      card: {
+        background: "#222D35",
+        boxShadow: "0px 0px 0px 1px #30393F",
       },
     },
   },
@@ -175,8 +205,39 @@ export const themes = [
           placeholder: "#F2F2F2",
         },
       },
+      text: {
+        primary: {
+          text: "#223354",
+        },
+        secondary: {
+          text: "#2233547F",
+        },
+        success: {
+          text: "#44D600",
+        },
+        danger: {
+          text: "#FF1A43",
+        },
+        warning: {
+          text: "#FFA31A",
+        },
+        info: {
+          text: "#33C2FF",
+        },
+        light: {
+          text: "#FFFFFF",
+        },
+        dark: {
+          text: "#000000",
+        },
+      },
+      card: {
+        background: "#FFFFFF",
+        boxShadow:
+          "0px 9px 16px rgba(159, 162, 191, 0.18), 0px 2px 2px rgba(159, 162, 191, 0.32)",
+      },
     },
   },
 ];
 
-export const defaultTheme = themes[1];
+export const defaultTheme = Themes[1];

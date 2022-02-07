@@ -1,4 +1,4 @@
-export declare const themes: {
+export declare const Themes: {
     name: string;
     components: {
         button: {
@@ -84,6 +84,36 @@ export declare const themes: {
                 text: string;
                 placeholder: string;
             };
+        };
+        text: {
+            primary: {
+                text: string;
+            };
+            secondary: {
+                text: string;
+            };
+            success: {
+                text: string;
+            };
+            danger: {
+                text: string;
+            };
+            warning: {
+                text: string;
+            };
+            info: {
+                text: string;
+            };
+            light: {
+                text: string;
+            };
+            dark: {
+                text: string;
+            };
+        };
+        card: {
+            background: string;
+            boxShadow: string;
         };
     };
 }[];
@@ -173,6 +203,36 @@ export declare const defaultTheme: {
                 text: string;
                 placeholder: string;
             };
+        };
+        text: {
+            primary: {
+                text: string;
+            };
+            secondary: {
+                text: string;
+            };
+            success: {
+                text: string;
+            };
+            danger: {
+                text: string;
+            };
+            warning: {
+                text: string;
+            };
+            info: {
+                text: string;
+            };
+            light: {
+                text: string;
+            };
+            dark: {
+                text: string;
+            };
+        };
+        card: {
+            background: string;
+            boxShadow: string;
         };
     };
 };

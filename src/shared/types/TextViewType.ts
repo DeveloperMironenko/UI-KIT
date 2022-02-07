@@ -12,3 +12,5 @@ export type TextTransformType =
   | "none"
   | "initial"
   | "inherit";
+
+export type TextWeightType = 400 | 500 | 700 | 900;

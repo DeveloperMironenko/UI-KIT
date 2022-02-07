@@ -1,7 +1,11 @@
 import { MouseEventHandler, ReactNode } from "react";
-import { SizeType, TextTransformType, ViewType } from "../../../shared";
-import { WidthType } from "../../../shared/types/WidthType";
-import { JustifyContent } from "../../../shared/types/JustifyType";
+import {
+  JustifyType,
+  SizeType,
+  TextTransformType,
+  ViewType,
+  WidthType,
+} from "../../../shared";
 
 export type ButtonProps = {
   className?: string;
@@ -10,9 +14,8 @@ export type ButtonProps = {
   size?: SizeType;
   textTransform?: TextTransformType;
   view?: ViewType;
-  justify?: JustifyContent;
+  justify?: JustifyType;
   outlined?: boolean;
-  // loading?: boolean;
   disabled?: boolean;
   children: ReactNode;
   onClick?: MouseEventHandler<HTMLButtonElement>;

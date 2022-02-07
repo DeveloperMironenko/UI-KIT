@@ -1,14 +1,12 @@
 import styled from "styled-components";
 import { ButtonProps } from "./Button.types";
+import { defaultTheme } from "../../../shared";
 
 const handlerWidth = (width: ButtonProps["width"]) => {
-  switch (width) {
-    case "full":
-      return "width: 100%; max-width: 100%; min-width: 100%;";
-    case "auto":
-    default:
-      return "width: auto; max-width: none; min-width: none;";
+  if (width) {
+    return `width: ${width}; max-width: ${width}; min-width: ${width};`;
   }
+  return "width: auto; max-width: auto; min-width: none;";
 };
 
 const handlerSize = (size: ButtonProps["size"]) => {
@@ -24,19 +22,19 @@ const handlerSize = (size: ButtonProps["size"]) => {
 };
 
 const handlerView = (
-  view: ButtonProps["view"],
+  view: ButtonProps["view"] = "primary",
   outlined: ButtonProps["outlined"],
   theme: any
 ) => {
   let background;
   let text;
 
-  if (view) {
+  if (theme?.components?.button) {
     background = theme.components.button[view].background;
     text = theme.components.button[view].text;
   } else {
-    background = theme.components.button.primary.background;
-    text = theme.components.button.primary.text;
+    background = defaultTheme.components.button[view].background;
+    text = defaultTheme.components.button[view].text;
   }
 
   if (outlined) {
