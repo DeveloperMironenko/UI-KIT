@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.0 (04/12/2022)
+Important thinks:
+
+- The `React` and `React-Dom` were updated to 18 version.
+
+--------------------
+
 ## v1.5.3 (02/07/2022)
 Important thinks:
 
