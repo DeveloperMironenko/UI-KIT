@@ -1,6 +1,6 @@
 {
   "name": "@nakamura.now/ui-kit",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "",
   "keywords": [],
   "main": "lib/cjs/index.js",
@@ -52,5 +52,9 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "styled-components": "^5.3.3"
+  },
+  "dependencies": {
+    "@mdi/js": "^6.6.96",
+    "@mdi/react": "^1.5.0"
   }
 }

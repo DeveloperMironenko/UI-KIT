@@ -300,6 +300,13 @@ declare const useTheme: () => {
     setTheme: (theme: ThemeType) => void;
 };
 
+declare enum IconName {
+    Plus = "plus",
+    Minus = "minus",
+    Refresh = "refresh",
+    Magnify = "magnify"
+}
+
 declare type TextProps = {
     forId?: string;
     className?: string;
@@ -324,6 +331,18 @@ declare type CardProps = {
 };
 
 declare const Card: ({ ...props }: CardProps) => JSX.Element;
+
+declare type IconProps = {
+    className?: string;
+    icon?: IconName;
+    cursor?: CursorType;
+    title?: string;
+    spin?: boolean;
+    rotate?: number;
+    onClick?: () => void;
+};
+
+declare const Icon: ({ className, icon, cursor, title, spin, rotate, onClick, }: IconProps) => JSX.Element;
 
 declare type ButtonProps = {
     className?: string;
@@ -387,4 +406,4 @@ declare const Container: ({ ...props }: ContainerProps) => JSX.Element;
 
 declare const Theme: React.MemoExoticComponent<({ children, theme }: ThemeProps) => JSX.Element>;
 
-export { AlignTextType, AlignType, Button, Card, Container, CursorType, DisplayType, FlexDirectionType, FlexWrapType, GlobalStyle, HeightType, Input, JustifyType, SizeType, SpaceType, Text, TextDecorationType, TextTransformType, TextWeightType, Theme, Themes, ViewType, WidthType, defaultTheme, useTheme };
+export { AlignTextType, AlignType, Button, Card, Container, CursorType, DisplayType, FlexDirectionType, FlexWrapType, GlobalStyle, HeightType, Icon, IconName, Input, JustifyType, SizeType, SpaceType, Text, TextDecorationType, TextTransformType, TextWeightType, Theme, Themes, ViewType, WidthType, defaultTheme, useTheme };
